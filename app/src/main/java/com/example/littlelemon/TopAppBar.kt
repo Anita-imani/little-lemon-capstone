@@ -28,11 +28,11 @@ fun TopAppBar(navController: NavHostController?= null, scaffoldState: ScaffoldSt
         IconButton(onClick = {
             scope?.launch { scaffoldState?.drawerState?.open() }
         }) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_hamburger),
-                contentDescription = "Menu Icon",
-                modifier = Modifier.size(24.dp)
-            )
+//            Image(
+//                painter = painterResource(id = R.drawable.ic_hamburger),
+//                contentDescription = "Menu Icon",
+//                modifier = Modifier.size(24.dp)
+//            )
         }
         Image(
             painter = painterResource(id = R.drawable.littlelemonimgtxt_nobg),
@@ -40,11 +40,11 @@ fun TopAppBar(navController: NavHostController?= null, scaffoldState: ScaffoldSt
             modifier = Modifier.fillMaxWidth(0.5F)
                 .padding(horizontal = 20.dp)
         )
-        IconButton(onClick = { navController?.navigate(Profile.route) }) {
+        IconButton(onClick = { navController?.navigate(Profile.route)}) {
             Image(
-                imageVector =  Icons.Filled.Person,
+                painter = painterResource(id = R.drawable.profile),
                 contentDescription = "Profile",
-                modifier = Modifier.size(24.dp)
+                modifier = Modifier.size(40.dp)
             )
         }
     }
