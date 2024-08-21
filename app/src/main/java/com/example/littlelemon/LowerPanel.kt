@@ -110,7 +110,6 @@ fun WeeklySpecial() {
 @Composable
 fun MenuDish(navController: NavHostController ?= null, dish: MenuItemRoom ?= null) {
     Card(onClick = {
-        Log.d("AAA", "Click ${dish?.id}")
         navController?.navigate(DishDetails.route + "/${dish?.id}")
     }) {
         Row(

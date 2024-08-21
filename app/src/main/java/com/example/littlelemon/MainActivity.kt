@@ -123,56 +123,6 @@ fun AppScreen(){
             Row {
                 MyNavigation()
             }
-            Row {
-                ItemOrder(count, { count++ }, { count-- })
-            }
-        }
-    }
-}
-
-@Composable
-fun ItemOrder(count: Int, onIncrement: () -> Int, onDecrement: () -> Int) {
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Card() {
-            Column(modifier = Modifier.padding(20.dp)) {
-
-                Text(
-                    text = stringResource(id = R.string.greek_salad),
-                    fontSize = 30.sp,
-                    fontWeight = FontWeight.W700
-                )
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    IconButton(onClick = { if (count != 0) onDecrement() }) {
-                        Icon(imageVector = Icons.Default.Clear, contentDescription = "Remove")
-                    }
-
-                    Text(
-                        text = "$count",
-                        fontSize = 28.sp,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(8.dp)
-                    )
-                    IconButton(onClick = { onIncrement() }) {
-                        Icon(imageVector = Icons.Default.Add, contentDescription = "Add")
-                    }
-                }
-                Row ( modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically) {
-
-                    Button(onClick = { /*TODO*/ },
-                        modifier = Modifier.fillMaxWidth(0.75F)) {
-                        Text(text = "Add")
-                    }
-                }
-            }
         }
     }
 }

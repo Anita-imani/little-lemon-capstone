@@ -44,20 +44,17 @@ fun DishDetails(id: Int) {
     val menuList = database.menuItemDao().getAll().observeAsState().value
     val dish = menuList?.find { it.id == id }
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        //TODO: Insert code here
         TopAppBar()
-//        Image(painter = painterResource(id = dish?.image),
-//            contentDescription = "Dish image",
-//            modifier = Modifier.fillMaxWidth(),
-//            contentScale = ContentScale.FillWidth)
         Surface(color = MaterialTheme.colors.background) {
             Box {
                 GlideImage(
-                    model = dish?.image,  // Replace with your image URL
+                    model = dish?.image,
                     contentDescription = "${dish?.title} Image",
                     contentScale = ContentScale.Fit,
-                    modifier = Modifier.size(100.dp) // Set your desired size here
-                )
+                    modifier = Modifier.size(400.dp)
+                ){
+                    it.override(400,600)
+                }
             }
         }
         Column( verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.padding(start = 10.dp, end = 10.dp)) {
