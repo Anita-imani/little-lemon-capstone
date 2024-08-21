@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id ("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
+    id ("kotlin-kapt")
+
 }
 
 android {
@@ -50,7 +53,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -58,7 +60,22 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    implementation (libs.androidx.material)
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.navigation.compose)
+    implementation (libs.ktor.client.android)
+    implementation (libs.ktor.client.content.negotiation)
+    implementation (libs.ktor.serialization.kotlinx.json)
+    implementation (libs.androidx.room.runtime)
+    implementation (libs.kotlinx.serialization.json)
+    implementation (libs.androidx.runtime.livedata)
+    implementation ("com.github.bumptech.glide:compose:1.0.0-alpha.1")
+    implementation ("androidx.room:room-runtime:2.5.0")
+    kapt ("androidx.room:room-compiler:2.5.0")
+    implementation ("androidx.room:room-ktx:2.5.0")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    implementation ("com.github.skydoves:landscapist-glide:1.4.9")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

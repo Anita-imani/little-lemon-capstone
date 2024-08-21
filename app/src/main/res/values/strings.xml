@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">LittleLemon</string>
+    <string name="title">Little Lemon</string>
+    <string name="order">Order Lemon</string>
+    <string name="chicago">Chicago</string>
+    <string name="descriptionone">We are family owned mediaterranean restaurant, food recipes served with a modern twist.</string>
+
+    <string name="location">Chicago</string>
+    <string name="description">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</string>
+    <string name="orderbuttontext">Order Take Away</string>
+    <string name="weekly_special">Weekly Special</string>
+    <string name="greek_salad">Greek Salad</string>
+    <string name="greek_salad_des">The famous Greek salad of crispy lettuce, peppers, olives, our Chicago ...</string>
+    <string name="add_for">Add for</string>
 </resources>
